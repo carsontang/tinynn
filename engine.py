@@ -141,6 +141,9 @@ class Variable:
         return out
     
     def tanh(self):
+        """
+        TODO: implement tanh's backward pass
+        """
         return Variable(data=np.tanh(self.data), label=self.label, grad=0, _op='tanh', _prev=(self,))
 
     def __str__(self):
